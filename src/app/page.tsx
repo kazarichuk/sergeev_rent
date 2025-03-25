@@ -16,7 +16,7 @@ export default function Home() {
     arrows: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1024,
         settings: {
           arrows: false,
           dots: false,
@@ -214,7 +214,7 @@ export default function Home() {
               object-fit: cover !important;
               object-position: center !important;
             }
-            @media (max-width: 768px) {
+            @media (max-width: 1024px) {
               .slick-slide {
                 height: auto !important;
                 margin-bottom: 16px !important;
