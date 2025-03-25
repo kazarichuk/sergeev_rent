@@ -24,7 +24,9 @@ export default function Home() {
           speed: 0,
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplay: false
+          autoplay: false,
+          vertical: true,
+          verticalSwiping: true
         }
       }
     ]
@@ -215,17 +217,13 @@ export default function Home() {
               object-position: center !important;
             }
             @media (max-width: 1024px) {
-              .slick-slide {
+              .slick-slider {
                 height: auto !important;
-                margin-bottom: 16px !important;
-              }
-              .slick-slide img {
-                height: auto !important;
-                aspect-ratio: 3/2 !important;
-                object-fit: cover !important;
-                border-radius: 12px !important;
+                margin: 0 !important;
+                padding: 0 !important;
               }
               .slick-list {
+                height: auto !important;
                 margin: 0 !important;
                 padding: 0 !important;
               }
@@ -233,6 +231,25 @@ export default function Home() {
                 display: flex !important;
                 flex-direction: column !important;
                 gap: 16px !important;
+                height: auto !important;
+                transform: none !important;
+              }
+              .slick-slide {
+                height: auto !important;
+                margin: 0 !important;
+                padding: 0 !important;
+              }
+              .slick-slide img {
+                height: auto !important;
+                aspect-ratio: 3/2 !important;
+                object-fit: cover !important;
+                border-radius: 12px !important;
+              }
+              .slick-arrow {
+                display: none !important;
+              }
+              .slick-dots {
+                display: none !important;
               }
             }
           `}</style>
