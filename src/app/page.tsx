@@ -136,17 +136,30 @@ export default function Home() {
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '16px',
+          gap: '24px',
           marginBottom: '40px'
         }}>
           {images.map((image, index) => (
-            <div key={index} style={{
-              width: '100%',
-              aspectRatio: '3/2',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
-            }}>
+            <div 
+              key={index} 
+              style={{
+                width: '100%',
+                aspectRatio: '3/2',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                boxShadow: '0 8px 24px rgba(0, 0, 0, 0.08)',
+                transition: 'all 0.3s ease',
+                cursor: 'pointer'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 12px 32px rgba(0, 0, 0, 0.12)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.08)';
+              }}
+            >
               <img 
                 src={image}
                 alt={`Car ${index + 1}`}
@@ -154,7 +167,8 @@ export default function Home() {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  objectPosition: 'center'
+                  objectPosition: 'center',
+                  transition: 'transform 0.3s ease'
                 }}
               />
             </div>
