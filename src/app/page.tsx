@@ -11,28 +11,28 @@ export default function Home() {
     <div className="gallery">
       <div className="image-container">
         <img
-          src="/photo_2025-03-25 7.36.48 PM.jpeg"
+          src="https://i.imgur.com/REPLACE_WITH_YOUR_IMAGE_ID_1.jpg"
           alt="Автомобиль 1"
         />
       </div>
 
       <div className="image-container">
         <img
-          src="/photo_2025-03-25 7.36.52 PM.jpeg"
+          src="https://i.imgur.com/REPLACE_WITH_YOUR_IMAGE_ID_2.jpg"
           alt="Автомобиль 2"
         />
       </div>
 
       <div className="image-container">
         <img
-          src="/photo_2025-03-25 7.36.54 PM.jpeg"
+          src="https://i.imgur.com/REPLACE_WITH_YOUR_IMAGE_ID_3.jpg"
           alt="Автомобиль 3"
         />
       </div>
 
       <div className="image-container">
         <img
-          src="/photo_2025-03-25 7.36.56 PM.jpeg"
+          src="https://i.imgur.com/REPLACE_WITH_YOUR_IMAGE_ID_4.jpg"
           alt="Автомобиль 4"
         />
       </div>
