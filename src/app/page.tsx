@@ -55,7 +55,7 @@ export default function Home() {
             justifyContent: 'center'
           }}>
             <a 
-              href="tel:+79097777777" 
+              href="tel:+79622699148" 
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -88,7 +88,7 @@ export default function Home() {
               Позвонить
             </a>
             <a 
-              href="https://t.me/your_username" 
+              href="https://t.me/persmeet" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{
