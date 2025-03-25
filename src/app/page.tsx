@@ -1,37 +1,6 @@
 'use client';
 
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 export default function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          arrows: false,
-          dots: false,
-          infinite: false,
-          speed: 0,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: false,
-          vertical: true,
-          verticalSwiping: true
-        }
-      }
-    ]
-  };
-
   const images = [
     "https://imgur.com/NerIFX8.jpg",
     "https://imgur.com/yWSmAmG.jpg",
@@ -163,112 +132,33 @@ export default function Home() {
         margin: '0 auto',
         padding: '20px'
       }}>
-        {/* Карусель */}
+        {/* Изображения */}
         <div style={{
-          marginBottom: '40px',
-          borderRadius: '16px',
-          overflow: 'hidden',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
-          position: 'relative',
-          aspectRatio: '3/2',
-          maxHeight: '853px'
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px',
+          marginBottom: '40px'
         }}>
-          <style jsx global>{`
-            .slick-prev, .slick-next {
-              width: 40px;
-              height: 40px;
-              background: rgba(255, 255, 255, 0.9) !important;
-              border-radius: 50%;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-              z-index: 1;
-              transition: all 0.2s ease;
-            }
-            .slick-prev:hover, .slick-next:hover {
-              background: white !important;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            }
-            .slick-prev {
-              left: 20px !important;
-            }
-            .slick-next {
-              right: 20px !important;
-            }
-            .slick-prev:before, .slick-next:before {
-              color: #1d1d1f !important;
-              font-size: 20px !important;
-            }
-            .slick-dots {
-              bottom: 20px !important;
-            }
-            .slick-dots li button:before {
-              color: rgba(255, 255, 255, 0.5) !important;
-              font-size: 8px !important;
-            }
-            .slick-dots li.slick-active button:before {
-              color: white !important;
-            }
-            .slick-slide {
-              height: 100% !important;
-            }
-            .slick-slide img {
-              width: 100% !important;
-              height: 100% !important;
-              object-fit: cover !important;
-              object-position: center !important;
-            }
-            @media (max-width: 1024px) {
-              .slick-slider {
-                height: auto !important;
-                margin: 0 !important;
-                padding: 0 !important;
-              }
-              .slick-list {
-                height: auto !important;
-                margin: 0 !important;
-                padding: 0 !important;
-              }
-              .slick-track {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 16px !important;
-                height: auto !important;
-                transform: none !important;
-              }
-              .slick-slide {
-                height: auto !important;
-                margin: 0 !important;
-                padding: 0 !important;
-              }
-              .slick-slide img {
-                height: auto !important;
-                aspect-ratio: 3/2 !important;
-                object-fit: cover !important;
-                border-radius: 12px !important;
-              }
-              .slick-arrow {
-                display: none !important;
-              }
-              .slick-dots {
-                display: none !important;
-              }
-            }
-          `}</style>
-          <Slider {...settings}>
-            {images.map((image, index) => (
-              <div key={index} style={{ position: 'relative' }}>
-                <img 
-                  src={image}
-                  alt={`Car ${index + 1}`}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                  }}
-                />
-              </div>
-            ))}
-          </Slider>
+          {images.map((image, index) => (
+            <div key={index} style={{
+              width: '100%',
+              aspectRatio: '3/2',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
+            }}>
+              <img 
+                src={image}
+                alt={`Car ${index + 1}`}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center'
+                }}
+              />
+            </div>
+          ))}
         </div>
       </main>
     </div>
