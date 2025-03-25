@@ -1,27 +1,61 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-@layer components {
-  .container {
-    @apply max-w-7xl mx-auto px-4 py-8;
-  }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
 
-  .car-card {
-    @apply border border-gray-200 rounded-lg p-6 mb-6 shadow-sm;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .car-image {
-    @apply w-full h-auto rounded-lg mb-4;
-  }
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
-  .phone-button {
-    @apply bg-green-500 text-white px-6 py-3 rounded-lg font-bold inline-block hover:bg-green-600 transition-colors mr-4;
-  }
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
 
-  .telegram-button {
-    @apply bg-blue-500 text-white px-6 py-3 rounded-lg font-bold inline-block hover:bg-blue-600 transition-colors;
-  }
+.car-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.car-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.phone-button {
+  background: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.telegram-button {
+  background: #0088cc;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
 }
 
 html {
