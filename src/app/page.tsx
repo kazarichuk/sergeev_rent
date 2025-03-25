@@ -19,13 +19,12 @@ export default function Home() {
         breakpoint: 768,
         settings: {
           arrows: false,
-          dots: true,
-          infinite: true,
-          speed: 500,
+          dots: false,
+          infinite: false,
+          speed: 0,
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 5000
+          autoplay: false
         }
       }
     ]
@@ -116,11 +115,11 @@ export default function Home() {
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               Позвонить
-            </a>
-            <a 
+          </a>
+          <a
               href="https://t.me/persmeet"
-              target="_blank"
-              rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
               style={{
                 backgroundColor: '#f5f5f7',
                 color: '#1d1d1f',
@@ -214,6 +213,27 @@ export default function Home() {
               height: 100% !important;
               object-fit: cover !important;
               object-position: center !important;
+            }
+            @media (max-width: 768px) {
+              .slick-slide {
+                height: auto !important;
+                margin-bottom: 16px !important;
+              }
+              .slick-slide img {
+                height: auto !important;
+                aspect-ratio: 3/2 !important;
+                object-fit: cover !important;
+                border-radius: 12px !important;
+              }
+              .slick-list {
+                margin: 0 !important;
+                padding: 0 !important;
+              }
+              .slick-track {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 16px !important;
+              }
             }
           `}</style>
           <Slider {...settings}>
