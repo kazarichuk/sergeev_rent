@@ -5,7 +5,11 @@ export default function Home() {
     <div style={{
       minHeight: '100vh',
       backgroundColor: '#ffffff',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+      borderRadius: '24px',
+      margin: '16px',
+      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+      overflow: 'hidden'
     }}>
       {/* Header */}
       <header style={{
@@ -23,20 +27,25 @@ export default function Home() {
           padding: '0 20px',
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'center'
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '12px'
         }}>
           <h1 style={{
-            fontSize: '24px',
+            fontSize: 'clamp(18px, 4vw, 24px)',
             fontWeight: '600',
             color: '#1d1d1f',
             margin: 0,
-            letterSpacing: '-0.5px'
+            letterSpacing: '-0.5px',
+            flex: '1 1 auto',
+            minWidth: '200px'
           }}>
             Аренда Авто Калининград
           </h1>
           <div style={{
             display: 'flex',
-            gap: '12px'
+            gap: '12px',
+            flexWrap: 'wrap'
           }}>
             <a 
               href="tel:+79622699148"
@@ -52,7 +61,8 @@ export default function Home() {
                 alignItems: 'center',
                 gap: '8px',
                 transition: 'all 0.2s ease',
-                boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
+                boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                whiteSpace: 'nowrap'
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.backgroundColor = '#0077ED';
@@ -86,7 +96,8 @@ export default function Home() {
                 alignItems: 'center',
                 gap: '8px',
                 transition: 'all 0.2s ease',
-                boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
+                boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                whiteSpace: 'nowrap'
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.backgroundColor = '#e8e8ed';
