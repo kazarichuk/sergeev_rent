@@ -32,10 +32,10 @@ export default function Home() {
   };
 
   const images = [
-    "https://imgur.com/r4xFEDN.jpg",
-    "https://imgur.com/qRjYlbi.jpg",
-    "https://imgur.com/ozCrk0L.jpg",
-    "https://imgur.com/tVbqDf7.jpg"
+    "https://imgur.com/NerIFX8.jpg",
+    "https://imgur.com/yWSmAmG.jpg",
+    "https://imgur.com/iBV4SDo.jpg",
+    "https://imgur.com/04JsrOY.jpg"
   ];
 
   return (
@@ -160,7 +160,7 @@ export default function Home() {
       <main style={{
         maxWidth: '1200px',
         margin: '0 auto',
-        padding: '0'
+        padding: '20px'
       }}>
         {/* Карусель */}
         <div style={{
@@ -168,7 +168,9 @@ export default function Home() {
           borderRadius: '16px',
           overflow: 'hidden',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
-          position: 'relative'
+          position: 'relative',
+          aspectRatio: '3/2',
+          maxHeight: '853px'
         }}>
           <style jsx global>{`
             .slick-prev, .slick-next {
@@ -205,10 +207,10 @@ export default function Home() {
               color: white !important;
             }
             .slick-slide {
-              height: 70vh !important;
-              min-height: 500px;
+              height: 100% !important;
             }
             .slick-slide img {
+              width: 100% !important;
               height: 100% !important;
               object-fit: cover !important;
               object-position: center !important;
@@ -224,7 +226,7 @@ export default function Home() {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    objectPosition: index === 1 ? 'center 70%' : 'center',
+                    objectPosition: 'center',
                   }}
                 />
               </div>
