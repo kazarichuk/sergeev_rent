@@ -12,7 +12,8 @@ export default function Home() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
+    arrows: true,
     responsive: [
       {
         breakpoint: 768,
@@ -24,7 +25,7 @@ export default function Home() {
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 3000
+          autoplaySpeed: 5000
         }
       }
     ]
@@ -159,15 +160,60 @@ export default function Home() {
       <main style={{
         maxWidth: '1200px',
         margin: '0 auto',
-        padding: '40px 20px'
+        padding: '0'
       }}>
         {/* Карусель */}
         <div style={{
           marginBottom: '40px',
           borderRadius: '16px',
           overflow: 'hidden',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)'
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+          position: 'relative'
         }}>
+          <style jsx global>{`
+            .slick-prev, .slick-next {
+              width: 40px;
+              height: 40px;
+              background: rgba(255, 255, 255, 0.9) !important;
+              border-radius: 50%;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              z-index: 1;
+              transition: all 0.2s ease;
+            }
+            .slick-prev:hover, .slick-next:hover {
+              background: white !important;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            }
+            .slick-prev {
+              left: 20px !important;
+            }
+            .slick-next {
+              right: 20px !important;
+            }
+            .slick-prev:before, .slick-next:before {
+              color: #1d1d1f !important;
+              font-size: 20px !important;
+            }
+            .slick-dots {
+              bottom: 20px !important;
+            }
+            .slick-dots li button:before {
+              color: rgba(255, 255, 255, 0.5) !important;
+              font-size: 8px !important;
+            }
+            .slick-dots li.slick-active button:before {
+              color: white !important;
+            }
+            .slick-slide {
+              height: 70vh !important;
+              min-height: 500px;
+            }
+            .slick-slide img {
+              height: 100% !important;
+              object-fit: cover !important;
+              object-position: center !important;
+            }
+          `}</style>
           <Slider {...settings}>
             {images.map((image, index) => (
               <div key={index} style={{ position: 'relative' }}>
@@ -176,87 +222,11 @@ export default function Home() {
                   alt={`Car ${index + 1}`}
                   style={{
                     width: '100%',
-                    height: '400px',
+                    height: '100%',
                     objectFit: 'cover',
                     objectPosition: index === 1 ? 'center 70%' : 'center',
                   }}
                 />
-                <div style={{
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  padding: '16px',
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))',
-                  display: 'flex',
-                  gap: '8px',
-                  justifyContent: 'center'
-                }}>
-                  <a 
-                    href="tel:+79622699148"
-                    style={{
-                      backgroundColor: '#0071e3',
-                      color: 'white',
-                      padding: '8px 16px',
-                      borderRadius: '980px',
-                      textDecoration: 'none',
-                      fontSize: '14px',
-                      fontWeight: '500',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      transition: 'all 0.2s ease',
-                      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
-                      whiteSpace: 'nowrap'
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.backgroundColor = '#0077ED';
-                      e.currentTarget.style.transform = 'translateY(-1px)';
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.backgroundColor = '#0071e3';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                    }}
-                  >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                    Позвонить
-                  </a>
-                  <a 
-                    href="https://t.me/persmeet"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      backgroundColor: '#f5f5f7',
-                      color: '#1d1d1f',
-                      padding: '8px 16px',
-                      borderRadius: '980px',
-                      textDecoration: 'none',
-                      fontSize: '14px',
-                      fontWeight: '500',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      transition: 'all 0.2s ease',
-                      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
-                      whiteSpace: 'nowrap'
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.backgroundColor = '#e8e8ed';
-                      e.currentTarget.style.transform = 'translateY(-1px)';
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.backgroundColor = '#f5f5f7';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                    }}
-                  >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    Telegram
-                  </a>
-                </div>
               </div>
             ))}
           </Slider>
