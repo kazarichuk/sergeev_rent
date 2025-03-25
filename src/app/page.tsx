@@ -1,13 +1,5 @@
 'use client';
 
-import { Metadata } from "next";
-import Image from 'next/image';
-
-export const metadata: Metadata = {
-  title: "Аренда премиальных автомобилей в Калининграде | AutoCar",
-  description: "Прокат премиальных автомобилей в Калининграде. Mercedes, Lexus и другие люксовые автомобили. Выгодные условия аренды, быстрое оформление.",
-};
-
 export default function Home() {
   return (
     <div style={{
