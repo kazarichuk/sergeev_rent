@@ -7,45 +7,41 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="container">
-      <h1>AutoCar - Аренда премиальных автомобилей в Калининграде</h1>
-      
-      <div className="car-card">
+    <div>
+      <h1>Аренда премиальных автомобилей в Калининграде</h1>
+
+      <div className="car">
         <h2>Mercedes S-Class</h2>
-        <img 
-          src="photo_2025-03-25 7.36.48 PM.jpeg"
-          alt="Mercedes S-Class" 
-          className="car-image"
-        />
+        <img src="/photo_2025-03-25 7.36.48 PM.jpeg" alt="Mercedes S-Class" />
         <p>Автомат • 3.0L V6 • Панорамная крыша</p>
-        <p><strong>от 12000₽/сутки</strong></p>
+        <p className="price">от 12000₽/сутки</p>
       </div>
 
-      <div className="car-card">
+      <div className="car">
         <h2>Lexus LS</h2>
-        <img 
-          src="photo_2025-03-25 7.36.52 PM.jpeg"
-          alt="Lexus LS" 
-          className="car-image"
-        />
+        <img src="/photo_2025-03-25 7.36.52 PM.jpeg" alt="Lexus LS" />
         <p>Автомат • 3.5L V6 • Премиум аудио</p>
-        <p><strong>от 11000₽/сутки</strong></p>
+        <p className="price">от 11000₽/сутки</p>
       </div>
 
-      <div className="car-card">
-        <h2>Хотите арендовать автомобиль?</h2>
-        <p>Свяжитесь с нами прямо сейчас и получите лучшие условия аренды</p>
-        
-        <div>
-          <a href="tel:+79622699148" className="phone-button">
-            Позвонить сейчас
-          </a>
-          
-          <a href="https://t.me/persmeet" className="telegram-button">
-            Написать в Telegram
-          </a>
-        </div>
+      <div className="car">
+        <img src="/photo_2025-03-25 7.36.54 PM.jpeg" alt="Автомобиль 3" />
+        <p className="price">от 10000₽/сутки</p>
       </div>
-    </main>
+
+      <div className="car">
+        <img src="/photo_2025-03-25 7.36.56 PM.jpeg" alt="Автомобиль 4" />
+        <p className="price">от 9000₽/сутки</p>
+      </div>
+
+      <div className="buttons">
+        <a href="tel:+79622699148" className="button green">
+          Позвонить: +7 (962) 269-91-48
+        </a>
+        <a href="https://t.me/persmeet" className="button blue">
+          Написать в Telegram
+        </a>
+      </div>
+    </div>
   );
 }
